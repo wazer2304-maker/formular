@@ -15,18 +15,18 @@
 
 		<main>
 			<h1>Formulär</h1> 
-			<form action="tack.html" method="get"> <!-- Postar med http-req post till ../tack.html -->
+			<form action="tack.html" method="get"> <!-- Postar med http-req post, skickas sedan vidare till ../tack.html -->
 
 
 				<br>
 
-				<label for="fname">Namn:</label>
+				<label for="fname">Namn:</label> <!-- "First name", Med label för inputs-->
 				<input type="text" id="fname" name="fname"><br>
 				<label for="lname">Efternamn:</label>
 				<input type="text" id="lname" name="lname">
 				<br><br>
 
-				<input type="checkbox" id="Matematik" name="Matematik" value="matematik">
+				<input type="checkbox" id="Matematik" name="Matematik" value="matematik"> <!--Checkboxar för att man kan något-->
 				<label for="Matematik"> Jag kan matematik</label><br>
 				<input type="checkbox" id="Svenska" name="Svenska" value="svenska">
 				<label for="Svenska"> Jag kan svenska.</label><br>
@@ -34,7 +34,7 @@
 				<label for="Engelska"> Jag kan engelska.</label>
 
 				<br><br>
-				<label for="farg" class="section_label">Favoritfärg:</label><br>
+				<label for="farg" class="section_label">Favoritfärg:</label><br> <!--Kan välja en av 3 värden för farg (färg). -->
 				<input type="radio" id="gron" name="farg" value="gron">
 				<label for="gron">Grön</label><br>
 				<input type="radio" id="gul" name="farg" value="gul">
@@ -54,7 +54,7 @@
 
 				  <br><br>
 
-				<input type="submit" value="Skicka">
+				<input type="submit" value="Skicka"> <!-- Skicka-knappen. (submit)-->
 			</form>
 		</main>
 

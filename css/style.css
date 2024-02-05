@@ -1,37 +1,38 @@
 
-body {
+body { /*Body som ska agera som större containern får ingen margin,padding och fyller rutan med 100vh,vw. */
     margin: 0;
     padding: 0;
     height: 100vh;
     width: 100vw;
-    background: radial-gradient(rgb(255, 255, 255), rgb(252, 254, 255));
+    background: radial-gradient(rgb(255, 255, 255), rgb(242, 251, 255)); /*"subtle" gradient. */
 }
 
 main {
     display: grid;
-    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-columns: 2fr 1fr 2fr; /*3x4 grid, för att balansera innehåll*/
     grid-template-rows: 0.1fr 0.1fr 1fr 0.1fr;
-    grid-template-areas: ". . ." ". title ." ". content ." ". . .";
-    text-align:center;
+    grid-template-areas: ". . ." ". title ." ". content ." ". . ."; /*title och content är centrerade  med utrymme omkring*/
+    text-align:center; /*Text centreras*/
 }
 
 form {
-    grid-area: content;
+    grid-area: content; /*I mitten under title. */
     padding: 70px;
     border: 1px solid black;
     border-radius: 40px;
-    font-family: "Nunito Sans", sans-serif;
+    font-family: "Nunito Sans", sans-serif; /*Typsnittet*/
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-    font-variation-settings:
+    font-variation-settings: /*Font-val. */
       "wdth" 100,
       "YTLC" 500;
-      box-shadow: 6px 6px 2px 1px rgba(104, 104, 105, 0.2);
-    background: white;
+    box-shadow: 6px 6px 2px 1px rgba(104, 104, 105, 0.2); /*Skugga under formuläret*/
+    background: white;/*Vit läslig bakgrund*/
+    background: linear-gradient(white, rgb(247, 247, 247));
 }
 
-form > input {
+form > input { /*Inputarna, alltså en input i formuläret, direkt inuti formuläret får design. */
     padding: 5px;
     font-size: 20px;
     background: rgb(252, 252, 252);
@@ -39,16 +40,16 @@ form > input {
     border: 1px solid rgb(189, 189, 189);
 }
 
-select {
+select { /*Flervals-favorit-språk-lådan. */
     padding: 5px;
     border-radius: 20px;
-    background: rgb(252,252,252);
+    background: rgb(252,252,252); /*För att matcha resterande inputs*/
     border: 1px solid rgb(189, 189, 189);
 }
 
-h1 {
+h1 { /*Titeltexten blir centrerad i grid-aeran title. */
     grid-area: title;
-        font-family: "Sixtyfour", sans-serif;
+        font-family: "Sixtyfour", sans-serif; /*Textval. */
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
@@ -57,7 +58,7 @@ h1 {
           "SCAN" 0;
 }
 
-.section_label {
+.section_label { /*Labeln för inputs är tjockare och italicized, "lutad". */
     font-style: italic;
     font-weight: 700;
 }
